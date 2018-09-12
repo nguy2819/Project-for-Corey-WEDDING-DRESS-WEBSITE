@@ -16,6 +16,17 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "test-single": "set CI=true&&npm test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src"
+  },
+  "pre-commit": [
+    "test-single",
+    "lint"
+  ],
+  "devDependencies": {
+    "eslint": "^5.5.0",
+    "eslint-plugin-react": "^7.11.1",
+    "pre-commit": "^1.2.2"
   }
 }

@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import './App.css';
+import React from 'react';
 import Test from './Components/TestComponent';
 import Routing from './Routing';
 import Header from './Components/Header';
@@ -62,7 +60,7 @@ const footerIcons =
   '\uf099'
 ]
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <PageStretch>

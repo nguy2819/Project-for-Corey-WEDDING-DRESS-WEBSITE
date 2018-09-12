@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { NavigationItemShape } from '../Models/DataShapes'
+import { NavigationItemShape } from '../Models/DataShapes';
 
 const NavigationStyle = styled.a`
     text-align: center;
@@ -56,8 +56,8 @@ function Navigation({ navigationItems }){
 }
 
 Navigation.propTypes = {
-    navigationItems: PropTypes.arrayOf(PropTypes.shape(NavigationItemShape)).isRequired
-}
+  navigationItems: PropTypes.arrayOf(PropTypes.shape(NavigationItemShape)).isRequired
+};
 // https://reactjs.org/docs/typechecking-with-proptypes.html
 
 export default Navigation;
