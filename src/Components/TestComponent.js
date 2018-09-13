@@ -1,27 +1,36 @@
 import React from 'react';
-import Navigation from './Navigation'
+import Header from './Header';
+import Nav from './Navigation';
+import Contact from './Contact';
 
 //To test new components, NOT THE FINAL PRODUCT
 
 export default function Testing(){
     const elements = [
         {
-            navigationText: 'test',
-            navigationUrl: 'https://www.google.com'
+            navigationText: 'Dress Maker',
+            navigationUrl: '/dress-maker'
         },
         {
-            navigationText: 'anotherTest',
-            navigationUrl: 'https://www.google.com'
+            navigationText: 'Pick a Style',
+            navigationUrl: '/pick-a-style'
         },
         {
-            navigationText: 'SamePage',
-            navigationUrl: '/#'
+            navigationText: 'Contact',
+            navigationUrl: 'contact'
+        },
+        {
+            navigationText: 'Cart',
+            navigationIcon: '\uf07a',
+            navigationUrl: 'cart'
         }
     ]
 
     return (
         <div>
-            <Navigation navigationItems={elements}/>
+            <Header />
+            <Nav navigationItems={elements}/>
+            <Contact />
         </div>
     )
 }
