@@ -8,6 +8,12 @@ const NavigationStyle = styled.a`
     text-align: center;
     margin-bottom: 10px;
     text-decoration: none;
+    &:hover {
+        background: green;
+        color: white;
+        // transform: scale(1.5, 1.25); //make the navigation bar pop out bigger
+        box-shadow: 5px 5px 5px #888;
+      }
 `
 
 const HeavyLine = styled.div`

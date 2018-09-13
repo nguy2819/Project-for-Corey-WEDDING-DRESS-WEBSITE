@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Nav from './Navigation';
-import Contact from './Contact';
+import ContactUs from './ContactUs';
 
 //To test new components, NOT THE FINAL PRODUCT
 
@@ -16,8 +16,8 @@ export default function Testing(){
             navigationUrl: '/pick-a-style'
         },
         {
-            navigationText: 'Contact',
-            navigationUrl: 'contact'
+            navigationText: 'Contact Us',
+            navigationUrl: 'contact-us'
         },
         {
             navigationText: 'Cart',
@@ -30,7 +30,7 @@ export default function Testing(){
         <div>
             <Header />
             <Nav navigationItems={elements}/>
-            <Contact />
+            <ContactUs />
         </div>
     )
 }
