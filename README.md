@@ -17,3 +17,7 @@ const NavigationStyle = styled.a`
       }
 `
 ```
+- Settingup an Express app
+```
+npm install ejs express --save
+```
