@@ -2,9 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Content = styled.form`
-    margin-left: 200px;
+    margin-left: 20px;
     padding: 1px 16px;
-    height: 1000px;
 `
 
 export default function EmailUs(){

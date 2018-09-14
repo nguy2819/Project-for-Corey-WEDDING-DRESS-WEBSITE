@@ -1,29 +1,73 @@
 import React from 'react';
 import styled from 'styled-components';
-// import EmailUs from './EmailUs';
+import EmailUs from './EmailUs';
 
-const SideBar = styled.a`
+const Wrapper = styled.div`
     margin: 0;
     padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
     overflow: auto;
 `
-const Content = styled.p`
-    margin-left: 200px;
-    padding: 1px 16px;
-    height: 1000px;
+const ElementWrapper = styled.div`
+    grid-column: 2;
 `
 
-export default function ContactUs(){
-    return (
-        <SideBar>
-            <a href="/book-an-appointment"> Book an Appointment </a>
-            <Content>
-                <p>Book an appointment with a Fin & Femme consultant to help you find the dress of your dreams.</p>
-            </Content>
-        </SideBar>
-    )
-};
+const Sidebar = styled.div`
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+`
+
+const Content = styled.p`
+    padding: 1px 16px;
+    margin-left: 20px;
+    grid-column: 2;
+`
+
+class ContactUs extends React.Component{
+
+    constructor(props){
+        super(props);
+        this.state = {
+            currentTab: ''
+        }
+        this.onTabChange = this.onTabChange.bind(this);
+    }
+
+    onTabChange(tabName){
+        this.setState({currentTab: tabName});
+    }
+
+    render(){
+
+        let element = null;
+        switch(this.state.currentTab){
+            case 'book':
+                element = (<Content>
+                    <p>Book an appointment with a Fin & Femme consultant to help you find the dress of your dreams.</p>
+                    <p><i class="fas fa-phone-volume"></i> 305.591.7332 </p>
+                    <p><i class="fas fa-envelope"></i> info@liancarlo.com</p>
+                    <p><i class="fas fa-map-marked-alt"></i> 1737 N.W. 79th Avenue Miami, FL 33126</p>
+                </Content>)
+                break;
+            case 'email':
+                element = <EmailUs />
+                break;
+        }
+        
+        return (
+            <Wrapper>
+                <Sidebar>
+                    <button onClick={e => this.onTabChange('book')}> Book an Appointment </button>
+                    <button onClick={e => this.onTabChange('email')}> Email Us</button>
+                </Sidebar>
+                <ElementWrapper>
+                    {element}
+                </ElementWrapper>
+            </Wrapper>
+        )
+    };
+}
+
+export default ContactUs;

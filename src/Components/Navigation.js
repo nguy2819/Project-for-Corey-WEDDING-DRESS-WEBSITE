@@ -4,17 +4,23 @@ import PropTypes from 'prop-types';
 import { NavigationItemShape } from '../Models/DataShapes'
 
 const NavigationStyle = styled.a`
-    margin: 0;
     text-align: center;
-    margin-bottom: 10px;
     text-decoration: none;
+    margin: 10px;
+    display: inline-block;
+`
+
+const NavSpan = styled.span`
+    margin-bottom: 10px;
+    a {color: black;}
     &:hover {
         background: green;
-        color: white;
+        border-radius: 10px;
+        a { color: white; }
         // transform: scale(1.5, 1.25); //make the navigation bar pop out bigger
         box-shadow: 5px 5px 5px #888;
-      }
-`
+}
+`;
 
 const HeavyLine = styled.div`
     border-bottom: 3px solid black;
@@ -33,10 +39,12 @@ const Wrapper = styled.div`
 function Navigation({ navigationItems }){
     const navigationElements = navigationItems.map(n => {
         return (
-        <NavigationStyle href={n.navigationUrl} key={n.navigationText}>
-            {n.navigationText}
-            {n.navigationIcon && <i className="fas">{n.navigationIcon}</i>}
-        </NavigationStyle>);
+            <NavSpan>
+                <NavigationStyle href={n.navigationUrl} key={n.navigationText}>
+                    {n.navigationText}
+                    {n.navigationIcon && <i className="fas">{n.navigationIcon}</i>}
+                </NavigationStyle>
+            </NavSpan>);
     });
     return (
         <Wrapper>

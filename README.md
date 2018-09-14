@@ -17,6 +17,7 @@ const NavigationStyle = styled.a`
       }
 `
 ```
+- Check out [CSS-grid](https://css-tricks.com/snippets/css/complete-guide-grid/) for more learning.
 - Settingup an Express app
 ```
 npm install ejs express --save
