@@ -34,13 +34,15 @@ export default function Testing(){
         },
         {
             footerText: '305.591.7332' 
-        },
-        {
-            footerIcon: '\uf082',
-            footerIcon: '\uf16d',
-            footerIcon: '\uf0d3', //pinterest didn't work
-            footerIcon: '\uf099'
         }
+    ]
+
+    const footerIcons = 
+    [
+        '\uf082',
+        '\uf16d',
+        '\uf0d3',
+        '\uf099'
     ]
 
     return (
@@ -48,7 +50,7 @@ export default function Testing(){
             <Header />
             <Nav navigationItems={elements}/>
             <ContactUs />
-            <Footer footerItems={elements2}/>
+            <Footer footerItems={elements2} footerIcons={footerIcons}/>
         </div>
     )
 }
