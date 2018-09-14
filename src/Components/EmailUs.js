@@ -19,6 +19,7 @@ const StyleInput = styled.div`
     &:hover {
         border: 3px solid #555;
     }
+    border-radius: 12px;
 `;
 
 const StyleTextArea = styled.div`
@@ -34,6 +35,7 @@ const StyleTextArea = styled.div`
     background-color: #f8f8f8;
     font-size: 16px;
     resize: none;
+    border-radius: 12px;
 `;
 
 const StyleSubmitButton = styled.div`
@@ -44,6 +46,7 @@ const StyleSubmitButton = styled.div`
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: 12px;
 `;
 
 const StyleSelectStateButton = styled.div`
@@ -54,11 +57,15 @@ const StyleSelectStateButton = styled.div`
     background-color: #f1f1f1;
 `;
 
+const StyleStarRedColor = styled.div`
+    color: red;
+`;
+
 export default function EmailUs(){
     return (
         <Content>
-            <h3> Email Us </h3>
-            <p> * required fields</p>
+            <p> Email Us and we will call/email you back as soon as possible </p>
+            <p><StyleStarRedColor>* required fields</StyleStarRedColor></p>
                 <form>
                     <label for="fname"> * First Name</label>
                     <StyleInput><input type="text" id="fname" name="firstname" placeholder="Your name.."/></StyleInput>
