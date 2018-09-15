@@ -25,6 +25,35 @@ const Sidebar = styled.div`
     cursor: pointer;
 `;
 
+const SyledButton = styled.button`
+    font-size: 20px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    background-color: #f1f1f1;
+    &:hover {
+        background-color: white;
+        border-right: 1px solid transparent;
+    };
+`;
+
+const SelectedButton = styled.button`
+font-size: 20px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    background-color: white;
+    border-right: 1px solid transparent;
+`;
+
 const Content = styled.p`
     padding: 1px 16px;
     margin-left: 20px;
@@ -98,11 +127,21 @@ class ContactUs extends React.Component{
         return (
             <Wrapper>
                 <Sidebar>
-                    <button onClick={e => this.onTabChange('book')}> Book an Appointment </button>
-                    <button onClick={e => this.onTabChange('customerservice')}> Customer Service</button>
-                    <button onClick={e => this.onTabChange('websitetechnicalissue')}> Website Technical Issue</button>
-                    <button onClick={e => this.onTabChange('pressinquiries')}> Press Inquiries</button>
-                    <button onClick={e => this.onTabChange('email')}> Email Us</button>
+                    {this.state.currentTab === 'book' 
+                        ? <SelectedButton> Book an Appointment </SelectedButton>
+                        : <SyledButton onClick={e => this.onTabChange('book')}> Book an Appointment </SyledButton>}
+                    {this.state.currentTab === 'customerservice' 
+                        ? <SelectedButton> Customer Service </SelectedButton>
+                        : <SyledButton onClick={e => this.onTabChange('customerservice')}> Customer Service</SyledButton>}
+                    {this.state.currentTab === 'websitetechnicalissue' 
+                        ? <SelectedButton> Website Technical Issue </SelectedButton>
+                        : <SyledButton onClick={e => this.onTabChange('websitetechnicalissue')}> Website Technical Issue</SyledButton>}
+                    {this.state.currentTab === 'pressinquiries' 
+                        ? <SelectedButton> Press Inquiries </SelectedButton>
+                        : <SyledButton onClick={e => this.onTabChange('pressinquiries')}> Press Inquiries</SyledButton>}
+                    {this.state.currentTab === 'email' 
+                        ? <SelectedButton> Email Us </SelectedButton>
+                        : <SyledButton onClick={e => this.onTabChange('email')}> Email Us</SyledButton>}
                 </Sidebar>
                 <ElementWrapper>
                     {element}

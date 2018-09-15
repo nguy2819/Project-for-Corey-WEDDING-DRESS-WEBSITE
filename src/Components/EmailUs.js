@@ -7,7 +7,7 @@ const Content = styled.form`
     
 `;
 
-const StyleInput = styled.div`
+const StyleInput = styled.input`
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -20,12 +20,16 @@ const StyleInput = styled.div`
         border: 3px solid #555;
     }
     border-radius: 12px;
+    &:focus{
+        border-color: blue;
+        outline: 0;
+    }
 `;
 
-const StyleTextArea = styled.div`
+const StyledTextArea = styled.textarea`
     width: 100%;
     height: 150px;
-    padding: 12px 20px;
+    padding: 16px 20px;
     box-sizing: border-box;
     border: 3px solid #ccc;
     &:hover {
@@ -36,9 +40,13 @@ const StyleTextArea = styled.div`
     font-size: 16px;
     resize: none;
     border-radius: 12px;
+    &:focus{
+        border-color: blue;
+        outline: 0;
+    }
 `;
 
-const StyleSubmitButton = styled.div`
+const StyleSubmitButton = styled.button`
     background-color: #4CAF50;
     border: none;
     color: white;
@@ -47,14 +55,27 @@ const StyleSubmitButton = styled.div`
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 12px;
+    margin-bottom: 100px;
 `;
 
-const StyleSelectStateButton = styled.div`
+const StyleSelectStateButton = styled.select`
     width: 100%;
+    height: 50px;
     padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    background-color: #f1f1f1;
+    margin: 8px 0;
+    box-sizing: border-box;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    border: 3px solid #ccc;
+    &:hover {
+        border: 3px solid #555;
+    }
+    border-radius: 12px;
+    &:focus{
+        border-color: blue;
+        outline: 0;
+    }
 `;
 
 const StyleStarRedColor = styled.div`
@@ -68,24 +89,22 @@ export default function EmailUs(){
             <p><StyleStarRedColor>* required fields</StyleStarRedColor></p>
                 <form>
                     <label for="fname"> * First Name</label>
-                    <StyleInput><input type="text" id="fname" name="firstname" placeholder="Your name.."/></StyleInput>
+                    <StyleInput type="text" id="fname" name="firstname" placeholder="Your name.."/>
 
                     <label for="lname"> * Last Name</label>
-                    <StyleInput><input type="text" id="lname" name="lastname" placeholder="Your last name.."/></StyleInput>
+                    <StyleInput type="text" id="lname" name="lastname" placeholder="Your last name.."/>
 
                     <label for="address1"> Address Line 1:</label>
-                    <StyleInput><input type="text" id="address1" name="addressline1" placeholder="Your address.."/></StyleInput>
+                    <StyleInput type="text" id="address1" name="addressline1" placeholder="Your address.."/>
 
                     <label for="address2"> Address Line 2:</label>
-                    <StyleInput><input type="text" id="address2" name="addressline2" placeholder="Your address.."/></StyleInput>
+                    <StyleInput type="text" id="address2" name="addressline2" placeholder="Your address.."/>
 
                     <label for="city"> City:</label>
-                    <StyleInput><input type="text" id="city" name="city" placeholder="Your city.."/></StyleInput>
+                    <StyleInput type="text" id="city" name="city" placeholder="Your city.."/>
 
                     <label for="state"> * State:</label>
-                    <StyleInput>
                             <StyleSelectStateButton>
-                                <select>
                                     <option value="AL">Alabama</option>
                                     <option value="AK">Alaska</option>
                                     <option value="AZ">Arizona</option>
@@ -136,35 +155,33 @@ export default function EmailUs(){
                                     <option value="WV">West Virginia</option>
                                     <option value="WI">Wisconsin</option>
                                     <option value="WY">Wyoming</option>
-                                </select>
                             </StyleSelectStateButton>
-                    </StyleInput>
 
                     <label for="zipcode"> Zip Code:</label>
-                    <StyleInput><input type="number" id="zipcode" name="zipcode" placeholder="Your zip code.."/></StyleInput>
+                    <StyleInput type="number" id="zipcode" name="zipcode" maxLength="5" placeholder="Your zip code.."/>
 
                     <label for="phone"> * Phone number:</label>
-                    <StyleInput><input type="number" id="phone" name="phone" placeholder="Your phone number.."/></StyleInput>
+                    <StyleInput type="text" id="phone" name="phone" maxLength="14" placeholder="Your phone number.."/>
 
                     <label for="email"> * Email:</label>
-                    <StyleInput><input type="email" id="email" name="email" placeholder="Your email.."/></StyleInput>
+                    <StyleInput type="email" id="email" name="email" placeholder="Your email.."/>
 
                     <label for="Order Number"> Order Number:</label>
-                    <StyleInput><input type="number" id="ordernumber" name="ordernumber" placeholder="Your order number.."/></StyleInput>
+                    <StyleInput type="number" id="ordernumber" name="ordernumber" placeholder="Your order number.."/>
 
                     <label for="weddingdate"> Wedding date:</label>
-                    <StyleInput><input type="date" type="datetime-local" id="weddingdate" name="weddingdate" placeholder="Your wedding date.."/></StyleInput>
+                    <StyleInput type="date" id="weddingdate" name="weddingdate" placeholder="Your wedding date.."/>
 
                     <label for="subject"> * Subject:</label>
-                    <StyleInput><input type="text" id="subject" name="subject" placeholder="Please type your subject.."/></StyleInput>
+                    <StyleInput type="text" id="subject" name="subject" placeholder="Please type your subject.."/>
 
                     <label for="file"> File attach:</label>
-                    <StyleInput><input type="file" id="file" name="file"/></StyleInput>
+                    <StyleInput type="file" id="file" name="file"/>
 
                     <label for="message"> * Message:</label>
-                    <StyleTextArea><input type="textarea" id="message" name="message" placeholder="Please type your message.."/></StyleTextArea>
+                    <StyledTextArea id="message" name="message" placeholder="Please type your message.."/>
 
-                    <StyleSubmitButton><button> Submit </button></StyleSubmitButton>
+                    <StyleSubmitButton> Submit</StyleSubmitButton>
                 </form>
         </Content>
     )

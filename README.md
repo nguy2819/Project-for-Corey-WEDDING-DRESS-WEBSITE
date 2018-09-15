@@ -32,6 +32,12 @@ const NavSpan = styled.span`
 }
 `;
 ```
+- This part is a special part for toggling a button to optical illusion, i.e. make two separate elements look like one
+```
+{this.state.currentTab === 'book' 
+                        ? <SelectedButton> Book an Appointment </SelectedButton>
+                        : <SyledButton onClick={e => this.onTabChange('book')}> Book an Appointment </SyledButton>}
+```
 - Settingup an Express app
 ```
 npm install ejs express --save
