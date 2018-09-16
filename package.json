@@ -16,7 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "test-single": "set CI=true&&npm test",
+    "test-single": "node test.js",
     "eject": "react-scripts eject",
     "lint": "eslint src --fix"
   },
