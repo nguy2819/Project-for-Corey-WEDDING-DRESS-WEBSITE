@@ -1,8 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
 import Header from './Header';
 import Nav from './Navigation';
 import ContactUs from './ContactUs';
 import Footer from './Footer';
+
+const Wrapper = styled.div`
+    margin: auto;
+    width: 80%;
+`;
 
 //To test new components, NOT THE FINAL PRODUCT
 
@@ -46,11 +52,9 @@ export default function Testing(){
     ]
 
     return (
-        <div>
-            <Header />
-            <Nav navigationItems={elements}/>
+        <Wrapper>
             <ContactUs />
             <Footer footerItems={elements2} footerIcons={footerIcons}/>
-        </div>
+        </Wrapper>
     )
 }

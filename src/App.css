@@ -1,84 +1,8 @@
-
-button {
-  margin: 5px;
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
-
-
-/* Breadcrumb Navigation under navbar (Home / Bridal) */
-ul.breadcrumb {
-  padding: 10px 16px;
-  list-style: none;
-  background-color: #eee;
-}
-ul.breadcrumb li {
-  display: inline;
-  font-size: 18px;
-}
-ul.breadcrumb li+li:before {
-  padding: 8px;
-  color: black;
-  content: ">\00a0"; /*   changed "/\00a0" to ">\00a0 so Home > Bridal, rather than Home / Bridal   */
-}
-ul.breadcrumb li a {
-  color: #0275d8;
-  text-decoration: none;
-}
-ul.breadcrumb li a:hover {
-  color: #01447e;
-  text-decoration: underline;
-}
-
-
-
-/* CSS for header Liancarlo and phone number with SignUp | Login */
-.header {
-  overflow: hidden;
-  background-color: #f1f1f1;
-  padding: 20px 10px;
-}
-
-.header-right {
-  float: right;
-}
-
-
-
-/* Accordion for sidebar (Explore, Shop, Filter by, Silhouete, etc.) */
-.accordion {
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 15%;
-  border-top: none;
-  border-bottom: 4px solid black;
-  border-left: none;
-  border-right: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-}
-
-.accordion:after {
-  content: '\002B'; /* Unicode character for "plus" sign (+) */
-  color: #777;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2212"; /* Unicode character for "minus" sign (-) */
-}
-
-.active, .accordion:hover {
-  background-color: #ccc; 
-}
-
-.panel {
-  padding: 0 18px;
-  display: none;
-  background-color: white;
-  overflow: hidden;
+#root {
+  height: 100%;
 }

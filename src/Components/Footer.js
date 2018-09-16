@@ -22,7 +22,6 @@ const HeavyLine = styled.div`
 `;
 
 const StyledFooter = styled.div`
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
