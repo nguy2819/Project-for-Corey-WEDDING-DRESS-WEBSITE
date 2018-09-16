@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import './App.css';
-import Test from './Components/TestComponent';
 import Routing from './Routing';
 import Header from './Components/Header';
 import Navigation from './Components/Navigation';
@@ -26,33 +24,33 @@ const StyledContent = styled.div`
 //TODO: Move to constant file
 const navElements = [
   {
-      navigationText: 'Dress Maker',
-      navigationUrl: '/dress-maker'
+    navigationText: 'Dress Maker',
+    navigationUrl: '/dress-maker'
   },
   {
-      navigationText: 'Pick a Style',
-      navigationUrl: '/pick-a-style'
+    navigationText: 'Pick a Style',
+    navigationUrl: '/pick-a-style'
   },
   {
-      navigationText: 'Contact Us',
-      navigationUrl: 'contact-us'
+    navigationText: 'Contact Us',
+    navigationUrl: 'contact-us'
   },
   {
-      navigationText: 'Cart',
-      navigationIcon: '\uf07a',
-      navigationUrl: 'cart'
+    navigationText: 'Cart',
+    navigationIcon: '\uf07a',
+    navigationUrl: 'cart'
   }
-]
+];
 
 const footerElement = [
   {
-      footerText: 'Book an Appointment',
-      footerUrl: 'book-an-appointment'
+    footerText: 'Book an Appointment',
+    footerUrl: 'book-an-appointment'
   },
   {
-      footerText: '305.591.7332' 
+    footerText: '305.591.7332' 
   }
-]
+];
 
 const footerIcons = 
 [
@@ -60,9 +58,9 @@ const footerIcons =
   '\uf16d',
   '\uf0d3',
   '\uf099'
-]
+];
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <PageStretch>
@@ -74,7 +72,7 @@ class App extends Component {
           <Routing />
         </StyledContent>
         <StyledFixture>
-        <Footer footerItems={footerElement} footerIcons={footerIcons}/>
+          <Footer footerItems={footerElement} footerIcons={footerIcons}/>
         </StyledFixture>
       </PageStretch>
     );
