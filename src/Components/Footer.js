@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const StyledIcon = styled.i`
     font-size: 32px;
@@ -30,20 +31,27 @@ const StyledFooter = styled.div`
     justify-content: space-evenly;
 `;
 
-export default function Footer({ footerItems, footerIcons }){
-    const footerElements = footerItems.map(n => {
-        return (
-        <FooterStyle href={n.footerUrl} key={n.footerText}>
-            {n.footerText}
-        </FooterStyle>);
-    });
-    const icons = footerIcons.map(i => <StyledIcon className="fab">{i}</StyledIcon>)
+function Footer({ footerItems, footerIcons }){
+  const footerElements = footerItems.map(n => {
     return (
-            <StyledFooter>
-                <HeavyLine>
-                    {footerElements}
-                    {icons}
-                </HeavyLine>
-            </StyledFooter>
-    )
+      <FooterStyle key={n.footerText} href={n.footerUrl}>
+        {n.footerText}
+      </FooterStyle>);
+  });
+  const icons = footerIcons.map(i => <StyledIcon key={i.replace(/\\u/, '')} className="fab">{i}</StyledIcon>);
+  return (
+    <StyledFooter>
+      <HeavyLine>
+        {footerElements}
+        {icons}
+      </HeavyLine>
+    </StyledFooter>
+  );
+}
+
+Footer.propTypes = {
+  footerItems: PropTypes.array,
+  footerIcons: PropTypes.array
 };
+
+export default Footer;

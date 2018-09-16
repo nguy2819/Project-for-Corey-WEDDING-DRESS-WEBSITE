@@ -18,7 +18,7 @@
     "test": "react-scripts test --env=jsdom",
     "test-single": "set CI=true&&npm test",
     "eject": "react-scripts eject",
-    "lint": "eslint src"
+    "lint": "eslint src --fix"
   },
   "pre-commit": [
     "test-single",

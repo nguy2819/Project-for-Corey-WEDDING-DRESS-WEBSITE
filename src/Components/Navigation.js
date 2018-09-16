@@ -8,7 +8,7 @@ const NavigationStyle = styled.a`
     text-decoration: none;
     margin: 10px;
     display: inline-block;
-`
+`;
 
 const NavSpan = styled.span`
     margin-bottom: 10px;
@@ -27,32 +27,32 @@ const HeavyLine = styled.div`
     padding: 2px;
     display: flex;
     justify-content: space-evenly;
-`
+`;
 
 const Wrapper = styled.div`
     padding: 5px 0;
     border-bottom: 2px solid black;
     display: block;
     margin-top: 10px;
-`
+`;
 
 function Navigation({ navigationItems }){
-    const navigationElements = navigationItems.map(n => {
-        return (
-            <NavSpan>
-                <NavigationStyle href={n.navigationUrl} key={n.navigationText}>
-                    {n.navigationText}
-                    {n.navigationIcon && <i className="fas">{n.navigationIcon}</i>}
-                </NavigationStyle>
-            </NavSpan>);
-    });
+  const navigationElements = navigationItems.map(n => {
     return (
-        <Wrapper>
-            <HeavyLine>
-                {navigationElements}
-            </HeavyLine>
-        </Wrapper>
-    )
+      <NavSpan key={n.navigationText}>
+        <NavigationStyle href={n.navigationUrl}>
+          {n.navigationText}
+          {n.navigationIcon && <i className="fas">{n.navigationIcon}</i>}
+        </NavigationStyle>
+      </NavSpan>);
+  });
+  return (
+    <Wrapper>
+      <HeavyLine>
+        {navigationElements}
+      </HeavyLine>
+    </Wrapper>
+  );
 }
 
 Navigation.propTypes = {

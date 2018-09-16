@@ -9,7 +9,7 @@ const StyledHeader = styled.h1`
     text-align: center; 
     padding-top: 10px;
     padding-bottom: 10px;
-`
+`;
 
 const Wrapper = styled.div`
     padding: 5px 0;
@@ -17,12 +17,12 @@ const Wrapper = styled.div`
     border-bottom: 2px solid black;
     display: block;
     margin-top: 25px;
-`
+`;
 
 export default function Header(){
-    return (
-        <Wrapper>
-            <StyledHeader>Fin & Femme</StyledHeader>
-        </Wrapper>
-    )
-};
+  return (
+    <Wrapper>
+      <StyledHeader>Fin & Femme</StyledHeader>
+    </Wrapper>
+  );
+}
