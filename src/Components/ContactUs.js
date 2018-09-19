@@ -2,6 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import EmailUs from './EmailUs';
 
+const StyledHeader = styled.h1`
+  font-family: Pinyon Script;
+  color: #be8d62;
+  font-size: 44px;
+  text-align: center;
+`;
+
 const Wrapper = styled.div`
     margin: 0;
     padding: 0;
@@ -15,7 +22,7 @@ const ElementWrapper = styled.div`
 `;
 
 const Sidebar = styled.div`
-    background-color: #f1f1f1;
+    background-color: #fff9ed;
     display: flex;
     flex-direction: column;
     color: white;
@@ -126,6 +133,8 @@ class ContactUs extends React.Component{
     }
         
     return (
+    <div>
+    <StyledHeader>Contact Us</StyledHeader>
       <Wrapper>
         <Sidebar>
           {this.state.currentTab === 'book' 
@@ -148,6 +157,7 @@ class ContactUs extends React.Component{
           {element}
         </ElementWrapper>
       </Wrapper>
+    </div>
     );
   }
 }

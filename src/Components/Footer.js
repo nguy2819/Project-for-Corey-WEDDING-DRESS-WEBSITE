@@ -26,8 +26,8 @@ const StyledFooter = styled.div`
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: black;
-    color: white;
+    background-color: #be8d62;
+    color: black;
     justify-content: space-evenly;
 `;
 

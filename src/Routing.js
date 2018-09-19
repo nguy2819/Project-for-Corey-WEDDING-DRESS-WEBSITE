@@ -4,13 +4,14 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import ContactUs from './Components/ContactUs';
 import Test from './Components/TestComponent';
+import LookBook from './Components/LookBook';
 
 function Routing(){
   return (<Router>
     <Switch>
       <Route exact path="/" render={() => <div>Home</div>}/>
       <Route path="/contact-us" render={() => <ContactUs />}/>
-        
+      <Route path="/look-book" render={() => <LookBook />}/>
         
         
         

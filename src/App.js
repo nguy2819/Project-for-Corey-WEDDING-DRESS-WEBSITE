@@ -5,10 +5,13 @@ import Header from './Components/Header';
 import Navigation from './Components/Navigation';
 import Footer from './Components/Footer';
 
+//possible background: #fff9ed
+
 const PageStretch = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: #fff9ed;
 `;
 
 const StyledFixture = styled.div`
@@ -28,8 +31,8 @@ const navElements = [
     navigationUrl: '/dress-maker'
   },
   {
-    navigationText: 'Pick a Style',
-    navigationUrl: '/pick-a-style'
+    navigationText: 'LOOKBOOK',
+    navigationUrl: '/look-book'
   },
   {
     navigationText: 'Contact Us',
@@ -45,7 +48,7 @@ const navElements = [
 const footerElement = [
   {
     footerText: 'Book an Appointment',
-    footerUrl: 'book-an-appointment'
+    footerUrl: 'contact-us'
   },
   {
     footerText: '305.591.7332' 

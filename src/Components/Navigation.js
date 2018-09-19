@@ -24,6 +24,7 @@ const NavSpan = styled.span`
 
 const HeavyLine = styled.div`
     border-bottom: 3px solid black;
+    border-color: #be8d62;
     padding: 2px;
     display: flex;
     justify-content: space-evenly;
@@ -32,6 +33,7 @@ const HeavyLine = styled.div`
 const Wrapper = styled.div`
     padding: 5px 0;
     border-bottom: 2px solid black;
+    border-color: #be8d62;
     display: block;
     margin-top: 10px;
 `;
