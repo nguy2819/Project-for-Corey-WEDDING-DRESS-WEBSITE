@@ -1,4 +1,6 @@
 # Testing ability to build a wedding website
+![screen shot 2018-10-19 at 10 46 32 am](https://user-images.githubusercontent.com/36870689/47232344-a90ec600-d38c-11e8-8a7b-8f2907dc07e7.png)
+![screen shot 2018-10-19 at 10 48 02 am](https://user-images.githubusercontent.com/36870689/47232370-bcba2c80-d38c-11e8-83bc-b8df04074596.png)
 
 - [x] Accordion sidebar
 - [x] Responsive Header with header-right for phone number, Sign Up and Log In function
